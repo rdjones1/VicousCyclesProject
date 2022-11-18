@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="css/systems.css">
+    <title>Vicous Cycles</title>
+    <ul>
+      <li><a href="">Events</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="">Financing</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Shop</a></li>
+      
+    </ul>
+    <img src="images/Vicious-Cycle-Logo.png" alt="Three orange stacked lines next to words Vicous Cycle representing the Vicous cycle logo">
+</head>
+
+<body>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/mountain-bike.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/fisheye-bike.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="images/bikes-lined-up.jpeg" style="width:100%">
+  </div>
+  <div><h1><em>Riding is a lifestyle</em></h1>
+  <div><h2><em>Let us help you live your life</em></h2>
+  </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<button class="button"><em>Shop With Us</em></button>
+
+<!-- this is the javascript for slideshow! -->
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 8500); // Change image every 8.5 seconds
+  }
+  </script>
+
+</body>
+
+</html>
